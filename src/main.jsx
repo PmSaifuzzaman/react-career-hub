@@ -10,26 +10,29 @@ import {
 import Statistics from './components/Statistics/Statistics';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 import Blogs from './components/Blogs/Blogs';
+import Home from './components/Home/Home';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage> ,
     children:[
       {
         path: "/",
-        element: <div>This is home</div>
+        element: <Home></Home>
       },
       {
         path: "/Statistics",
         element: <Statistics></Statistics>
       },
       {
-        path: "/Applied Jobs",
+        path: "/AppliedJobs",
         element: <AppliedJobs></AppliedJobs>
       },
       {
-        path: "/Blog",
+        path: "/Blogs",
         element: <Blogs></Blogs>
       },
     ]
